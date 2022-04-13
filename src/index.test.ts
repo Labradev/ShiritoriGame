@@ -1,4 +1,4 @@
-import { shiritoriGame } from "./index"
+import shiritoriGame from "./index"
 
 describe("Shiritori Game", () => {
   it("checks if the game has the dictionary", () => {
@@ -10,8 +10,14 @@ describe("Shiritori Game", () => {
       'tongue'
       ]
 
-    const recivedDictionary = shiritoriGame();
+    const recivedDictionary = new shiritoriGame().getDictionary();
 
     expect(recivedDictionary).toEqual(expectedDictionary);
+  })
+  it("checks if the word is not in the playable dictionary", () => {
+
+    const isInTheDictionary = new shiritoriGame().checkWord("book");
+
+    expect(isInTheDictionary).toEqual(false);
   })
 })

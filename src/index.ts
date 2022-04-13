@@ -7,6 +7,12 @@ const playableDictionary = [
   'tongue'
   ]
 
-export function shiritoriGame(): any {
-  return playableDictionary
+export default class shiritoriGame {
+  checkWord(wordToCheck:string){
+    return playableDictionary.includes(wordToCheck)
+  }
+  getDictionary(){
+    return playableDictionary
+  }
+  
 };
