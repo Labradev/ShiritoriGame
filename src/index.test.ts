@@ -1,11 +1,17 @@
-import { wadus } from "./index"
+import { shiritoriGame } from "./index"
 
-describe("Wadus", () => {
-  it("returns 'wadus'", () => {
-    const expected = "wadus";
+describe("Shiritori Game", () => {
+  it("checks if the game has the dictionary", () => {
+    const expectedDictionary = [
+      'allergic',
+      'cat',
+      'data',
+      'end',
+      'tongue'
+      ]
 
-    const result = wadus();
+    const recivedDictionary = shiritoriGame();
 
-    expect(result).toEqual(expected);
+    expect(recivedDictionary).toEqual(expectedDictionary);
   })
 })
