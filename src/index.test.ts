@@ -29,4 +29,18 @@ describe("Shiritori Game", () => {
 
     expect(isConcatenated).toEqual(true);
   })
+
+  it("checks if user is in time", async () => {
+
+    let game = new shiritoriGame()
+    
+    game.playerOne("cat");
+
+    //await new Promise((r) => setTimeout(r, 4000))
+    jest.setTimeout(11000);
+
+    game.playerTwo("tongue");
+  
+    expect(game.gameStatus).toEqual(true);
+  })
 })
